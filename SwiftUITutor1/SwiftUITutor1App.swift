@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftUITutor1App: App {
+    @State private var dataSource = DataSource()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LandmarksListView()
+                .environment(dataSource)
         }
     }
 }
